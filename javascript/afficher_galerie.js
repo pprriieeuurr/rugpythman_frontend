@@ -1,4 +1,6 @@
 let apiUrl
+const message = document.getElementById("alerte");
+
 if (localStorage.getItem("server-rugpythman") !== null) {
     apiUrl = localStorage.getItem("server-rugpythman");
 } else {
@@ -20,7 +22,9 @@ fetch(`${apiUrl}/cartes`,{"method": "GET",headers:{"ngrok-skip-browser-warning":
     }
   })
   .catch(error => {
-    console.error('Error:', error);
+    message.classList.remove("message-bleu");
+    message.classList.add("message-rouge");
+    message.innerHTML = "Une erreur s'est produite. Si le problème periste, <a href='./settings.html'>tentez de modifier le serveur</a>.";
   });
 
 

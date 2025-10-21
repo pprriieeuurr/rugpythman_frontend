@@ -37,7 +37,7 @@ form.addEventListener('submit', function (event) {
         .catch(error => {
             message.classList.remove("message-bleu");
             message.classList.add("message-rouge");
-            message.innerHTML = "Une erreur s'est produite";
+            message.innerHTML = "Une erreur s'est produite. Si le problème periste, <a href='./settings.html'>tentez de modifier le serveur</a>.";
         });
 });
 window.onbeforeunload = function(){
