@@ -1,0 +1,92 @@
+body {
+    background-image:url(fabe-collage-diqJhQtHHNk-unsplash.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+    margin: 0;      
+}
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.application {
+    text-align: center;
+    width: 360px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #00000026;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+h1 {
+    color: white;
+    font-weight: bolder;
+}
+h2 {
+    color: white;
+    font-weight: blod;
+}
+
+h2 {
+    font-weight: bolder;
+}
+
+.etiquette {
+    font-weight: bold;
+}
+
+.form {
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    box-shadow: 0 4px 8px 0 #00000033;
+    text-align: right;
+}
+.contenu {
+    padding: 5px;
+}
+.message {
+    position: fixed;
+    top: 0;
+    display: none;
+    padding: 5px;
+    width: fit-content;
+    justify-self: center;
+    border-radius: 0px 0px 7px 7px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.message-bas {
+    position: fixed;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    border-radius: 7px 0px 0px 0px;
+}
+.message-vert {
+    background-color: rgba(211, 255, 161, 0.8);
+    display: block;
+}
+.message-rouge {
+    background-color: rgba(255, 161, 161, 0.8);
+    display: block;
+}
+.message-bleu {
+    background-color: rgba(161, 195, 255, 0.8);
+    display: block;
+}
+
+input[type=file] {
+    display: none;
+}
+
+.zone-de-drop {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 200px;
+    cursor: pointer;
+}

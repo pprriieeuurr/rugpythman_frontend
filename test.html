@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carte Joueur</title>
+<style>
+body {
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* --- Carte principale --- */
+.card {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
+  border: 4px solid white;
+  background: linear-gradient(180deg, #b621fe, #1fd1f9);
+}
+
+/* --- Image du joueur --- */
+.player-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Dégradé de lisibilité (overlay) --- */
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgb(0, 0, 0), rgba(0,0,0,0));
+  z-index: 2;
+}
+
+/* --- Bloc info texte --- */
+.info {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  z-index: 3;
+}
+
+.info h2 {
+  margin: 10px 0 5px;
+  font-size: 1.4em;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* --- Badges et rareté --- */
+.badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  color: #333;
+  font-weight: 700;
+}
+
+.logo {
+  width: 24px;
+  height: 24px;
+}
+
+.rarity {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <img src="https://media.gettyimages.com/id/641074856/de/foto/johannes-jonker-during-the-emirates-lions-photocall-session-at-emirates-airline-park-on-january.jpg?s=594x594&w=gi&k=20&c=TqLD587YeBkRABQ8mzg9EAEb158vTg4gmgNyTA0DzVA=" class="player-img" alt="Joueur">
+  <div class="info">
+    <div class="badges">
+      <div class="badge">24-25</div>
+      <div class="badge"><img src="https://upload.wikimedia.org/wikipedia/en/1/12/FC_Grenoble_Rugby_logo.svg" class="logo"></div>
+    </div>
+    <h2>JOHANNES JONKER</h2>
+    <div class="rarity">RARE</div>
+  </div>
+</div>
+
+</body>
+</html>
