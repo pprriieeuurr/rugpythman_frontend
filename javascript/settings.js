@@ -1,4 +1,11 @@
 function valider() {
-    localStorage.setItem("server-rugpythman",document.getElementById("url").value)
-    window.location.href = "./index.html";
+    const entree = document.getElementById("url").value
+    fetch(`${entree}/cartes`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Le serveur ne répond pas ok.");
+            } else {
+                localStorage.setItem("server-rugpythman",entree)
+                window.location.href = "./index.html";
+    }})
 }

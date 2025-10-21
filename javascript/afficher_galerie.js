@@ -1,7 +1,8 @@
+let apiUrl
 if (localStorage.getItem("server-rugpythman") !== null) {
-    const apiUrl = localStorage.getItem("server-rugpythman");
+    apiUrl = localStorage.getItem("server-rugpythman");
 } else {
-    const apiUrl = `http://127.0.0.1:8000`;
+    window.location.href = "./settings.html";
 }
 const fancardsDiv = document.getElementById("fancards")
 
