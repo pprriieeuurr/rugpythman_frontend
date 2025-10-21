@@ -19,6 +19,7 @@ body {
     box-shadow: 0 5px 20px #00000026;
     background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255,255,255,0.5);
+    color: white;
 }
 
 h1 {

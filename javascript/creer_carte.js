@@ -1,3 +1,9 @@
+if (localStorage.getItem("server-rugpythman") !== null) {
+    const apiUrl = `${localStorage.getItem("server-rugpythman")}/cartes`;
+} else {
+    window.location.href = "./settings.html";
+    const apiUrl = `http://127.0.0.1:8000/cartes`;
+}
 const apiUrl = "http://127.0.0.1:8000/cartes";
 const message = document.getElementById("alerte");
 
