@@ -17,6 +17,7 @@ form.addEventListener('submit', function (event) {
     const formData = new FormData(form);
     const requestOptions = {
         method: 'POST',
+        headers:{"ngrok-skip-browser-warning":"true"},
         body: formData,
     };
     document.getElementById("body").classList.remove("body")
