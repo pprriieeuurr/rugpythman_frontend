@@ -7,7 +7,7 @@ if (localStorage.getItem("server-rugpythman") !== null) {
 const fancardsDiv = document.getElementById("fancards")
 
 
-fetch(`${apiUrl}/cartes`)
+fetch(`${apiUrl}/cartes`,{"method": "GET",headers:{"ngrok-skip-browser-warning":"true"}})
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
